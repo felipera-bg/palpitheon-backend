@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Palpitheon.Core/Palpitheon.Core.csproj" />
+    <Project Path="src/Palpitheon.Infrastructure/Palpitheon.Infrastructure.csproj" />
+    <Project Path="src/Palpitheon.API/Palpitheon.API.csproj" />
+  </Folder>
+</Solution>
