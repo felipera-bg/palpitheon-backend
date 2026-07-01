@@ -30,22 +30,22 @@ As imagens dos indicados serão salvas no Firebase Storage. Quanto ao resto, nã
 ```
 src/
 ├── Palpitheon. Core 
-│   ├── Entities/ 
-│   ├── Interfaces/
-|		|		├── Data
-|		|		├── Services 
-|		|		└── Notifications 
-|		|		
-│   └── Services/
+│     ├── Entities/ 
+│     ├── Interfaces/
+|     |     ├── Data
+|     |     ├── Services 
+|     |     └── Notifications 
+|     |		
+│     └── Services/
 │
 ├── Palpitheon. Infrastructure
-│   ├── Data/
-│   └── Repositories/
+│     ├── Data/
+│     └── Repositories/
 │
 └── Palpitheon. API
-   ├── Controllers/
-   ├── Hubs/
-   └── Program.cs
+     ├── Controllers/
+     ├── Hubs/
+     └── Program.cs
 ```
 
 
@@ -215,8 +215,7 @@ Acessada ao clicar em qualquer card de categoria. O comportamento muda conforme 
 
 ### 1. Regras de Palpites e Votação
 * **Apenas Um Voto:** Cada usuário só pode ter 1 palpite ativo por categoria. Um novo palpite na mesma categoria deve sobrescrever (atualizar) o anterior.
-* **Trava de Tempo:** A criação ou edição de palpites só é permitida enquanto o status da categoria for `votacao_aberta`.
-* **Bloqueio Pós-Fechamento:** Se o status da categoria for `votacao_fechada`, qualquer tentativa de enviar um palpite deve retornar 403 Forbidden.
+* **Bloqueio Pós-Fechamento:** A criação ou edição de palpites só é permitida enquanto o status da categoria for `votacao_aberta`. Se o status da categoria for `votacao_fechada`, qualquer tentativa de enviar um palpite deve retornar 403 Forbidden.
 
 ### 2. Regras de Visibilidade e Privacidade (Anti-Espionagem)
 * **Voto Secreto:** Enquanto uma categoria estiver com status `votacao_aberta`, nenhum usuário pode ver o palpite de outro. A API deve ocultar esse dado.
